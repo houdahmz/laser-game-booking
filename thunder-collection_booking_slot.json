@@ -1,0 +1,66 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "booking_slot",
+    "collectionId": "4cb0ecb5-3eff-4ab2-89d8-5989f78889c6",
+    "dateExported": "2024-09-07T18:07:14.517Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fef2c794-538f-45b7-b355-a6933197308c",
+            "colId": "4cb0ecb5-3eff-4ab2-89d8-5989f78889c6",
+            "containerId": "",
+            "name": "Get time slots",
+            "url": "http://localhost:5000/slots?date=2024-09-07",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-09-07T18:02:57.580Z",
+            "modified": "2024-09-07T18:06:47.532Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "date",
+                    "value": "2024-09-07",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "a2175bbf-c744-41c4-999f-492dbb951ebd",
+            "colId": "4cb0ecb5-3eff-4ab2-89d8-5989f78889c6",
+            "containerId": "",
+            "name": "Get booking",
+            "url": "http://localhost:5000/book",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-09-07T18:03:20.333Z",
+            "modified": "2024-09-07T18:05:25.930Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"date\": \"2024-09-07\",\n  \"time\": \"10:30 AM\",\n  \"name\": \"Houda hamzaoui\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "3fad62b2-89fc-408d-b093-15f7599fb069",
+            "colId": "4cb0ecb5-3eff-4ab2-89d8-5989f78889c6",
+            "containerId": "",
+            "name": "Get time slots Copy",
+            "url": "http://localhost:5000/slots/available?date=2024-09-07",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-09-07T18:05:56.564Z",
+            "modified": "2024-09-07T18:06:32.227Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "date",
+                    "value": "2024-09-07",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "ref": "1iT-Q1cO60OHUDOLVT3LlzhsNVX04ryXI1yHl0Wa-KbRF1cBq4IaO0XzezscgyTWDR05GVOUTQvPnrW_KsRTuA"
+}
