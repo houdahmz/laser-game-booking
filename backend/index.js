@@ -49,6 +49,19 @@ app.get('/slots/available', (req, res) => {
     const slots = availableSlots?.[date]?.filter(slot => !slot.booked);
     res.json(slots);
 });
-
+app.post('/book', (req, res) => {
+    const { date, time, name } = req.body;
+    if (!date || !time || !name || typeof name !== 'string') {
+        return res.status(400).json({ message: 'Date, time, and name are required.' });
+    }
+    const slot = (availableSlots[date] || []).find(s => s.time === time);
+    if (slot && !slot.booked) {
+        slot.booked = true;
+        slot.name = name;
+        res.status(200).json({ message: 'Booking successful!' });
+    } else {
+        res.status(400).json({ message: 'Slot not available.' });
+    }
+});
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
