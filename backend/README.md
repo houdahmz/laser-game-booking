@@ -26,12 +26,12 @@ This project is a simple backend application for managing booking slots. It is b
 
    ```bash
    cd laser-game-booking/backend
+3. Install the dependencies:
 
-3. Install the dependencies
- ```bash
-  npm install
+   ```bash
+   npm install 
 
-4. Running the Server
+4. Running the Server:
    ```bash
    node index.js
 
